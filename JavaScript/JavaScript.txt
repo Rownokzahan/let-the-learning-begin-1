@@ -1,0 +1,27 @@
+## let name= "Rownok";
+    console.log(typeof name);//typeof shows data type of the  variable
+
+## How to console varables inside a single quotation with strings
+    console.log(`number1 is ${number1}`);    
+
+## Shortcut for opening console in chrome
+    ctrl+shift+j
+
+## to go back to the previous or forward pages you have been in a tab 
+	type in console:
+	window.history.back() // you can set a parmeter also like
+	window.history.back(3)
+	
+	wind.history.forward(3)
+
+## to edit any website pages content or text
+	type in console:
+	document.body.contentEditable=true;
+
+## how to clear cache 
+		1. Go to inspect
+		2. mouseover on the reload button and hold it
+		3. Select Empty cache and hard reload
+## To restart chrome
+	type in the url bar:
+	chrome://restart

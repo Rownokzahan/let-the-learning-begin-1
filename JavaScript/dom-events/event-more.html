@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li >My Items</li>
+        <li onclick="itemHandelar()">Lorem, ipsum.</li>
+        <li onclick="this.innerText='I am clicked'">Lorem, ipsum.</li>
+        <li>Lorem, ipsum.</li>
+        <li id="last-item" >Lorem, ipsum.</li>
+    </ul>
+    <script>
+
+        function itemHandelar(){
+            console.log(event.target.innerText);
+        }
+        document.getElementById('last-item').addEventListener('click', itemHandelar);
+    </script>
+</body>
+</html>

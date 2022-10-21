@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Dom</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Explore Dom</h1>
+            <p id="p1" onclick="fun()"
+            >Click me to see the changes</p>
+            <p id="important" title= "Important"class="lorem">⚠️ This is the most important paragraph. Hover me⚠️</p>
+            <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, ab!</p>
+            <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, ab!</p>
+            <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, ab!</p>
+            <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, ab!</p>
+            <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, ab!</p>
+        </section>
+
+        <section class="special">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo.</h1>
+            <p>This is a paragraph</p>
+        </section>
+
+    </main>
+    <script>
+            function fun(){
+            let text =document.getElementById("p1");
+            text.innerText ="After Click";
+            text.style.backgroundColor="yellow";
+            text.style.fontSize= "30px";
+        }
+
+        let newP =document.getElementsByClassName('lorem');
+
+        for( let i =1; i<newP.length;i=i+2){
+            newP[i].innerText= 'This paragraph has been changed';
+            newP[i].style.backgroundColor="lightgreen"
+        }
+
+        let special = document.querySelector('section.special h1'); // it works like css selector
+        special.innerText= "This headline has changed";
+
+        document.getElementById('important').setAttribute('title','Very Important');
+    </script>
+</body>
+</html>

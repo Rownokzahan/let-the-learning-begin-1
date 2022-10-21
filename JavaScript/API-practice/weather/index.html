@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Temperature Hot</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url(images/bg-image.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input id="city-name" type="text" class="form-control" placeholder="Enter a location for Weather ...">
+                <div class="input-group-append">
+                    <button id="search-btn" type="button" class="btn btn-danger">Search</button>
+                </div>
+            </div>
+        </form>
+        <div class="weather-status text-white text-center">
+            <span id="weather-icon"><img src="https://openweathermap.org/img/wn/02d@2x.png" alt=""></span>
+            <h1 id="city">Dhaka</h1>
+            <h3><span id="temperature">38.06</span>&deg;C</h3>
+            <h1 id="weather" class="lead">Clouds</h1>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    function weather(city){
+        const link = `http://api.openweathermap.org/data/2.5/weather?q=${city},bd&APPID=5ee4d316f0fbc9f6dbcb944eb0e98905`;
+        fetch(link)
+        .then(response=>response.json())
+        .then(data=>{
+            if(data.name==undefined){
+                document.getElementById('city').innerText ="Wrong City Name";
+            }
+            else{
+                // console.log(data);
+                const weatherIcon = data.weather[0].icon;
+                document.getElementById('weather-icon').innerHTML=`<img src="icons/${weatherIcon}.png" alt="">`;
+                document.getElementById('city').innerText =data.name;
+                const tempKelvin = parseFloat(data.main.temp);
+                const tempCelcius = (tempKelvin-273.15).toFixed(2);
+                document.getElementById('temperature').innerText= tempCelcius;
+                document.getElementById('weather').innerText=data.weather[0].main;
+            }
+        });
+    }
+    document.getElementById('search-btn').addEventListener('click',function(){
+        const cityName = document.getElementById('city-name').value;
+        weather(cityName);
+    })
+
+</script>
+
+</html>

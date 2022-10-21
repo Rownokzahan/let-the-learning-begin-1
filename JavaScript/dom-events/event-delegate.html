@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event Delegate</h1>
+    <h3>My List</h3>
+    <ul id="myList">
+        <li class="item">List item 1</li>
+        <li class="item">List item 2</li>
+        <li class="item">List item 3</li>
+        <li class="item">List item 4</li>
+        <li class="item">List item 5</li>
+    </ul>
+    <button id="addItem">Add New Item</button>
+
+
+    <script>
+        document.getElementById('addItem').addEventListener('click',function(event){
+            let newItem = document.createElement('li');
+            newItem.innerHTML="New list item";
+            document.getElementById('myList').appendChild(newItem);
+        })
+
+        // let items = document.getElementsByClassName('item');
+        // for (let i = 0; i < items.length; i++) {
+        //     let item = items[i];
+        //     item.addEventListener('click',function(event){
+        //         // console.log(event.target);
+        //         // console.log(event.target.innerText);
+        //         // console.log(event.target.parentNode);
+
+        //         // event.target.parentNode.removeChild(this);
+        //         event.target.parentNode.removeChild(event.target);
+        //     });            
+        // }
+
+        document.getElementById('myList').addEventListener('click', function(){
+            // console.log(this, event.target);
+            event.target.parentNode.removeChild(event.target);
+        });
+
+    </script>
+</body>
+</html>

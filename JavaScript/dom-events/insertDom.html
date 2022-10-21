@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Dom</title>
+</head>
+<body>
+    <article id="first-article">
+        <h1>Article</h1>
+        <p>This is a paragraph</p>
+    </article>
+
+    <article>
+        <h3>Grocery List</h3>
+        <ul id="gList">
+            <li>gift item-1</li>
+            <li>gift item-2</li>
+            <li>gift item-3</li>
+            <li>gift item-4</li>
+        </ul>
+    </article>
+
+
+    <script>
+        // adding a new element 
+        let article = document.getElementById('first-article');
+        let newParagraph = document.createElement('p');
+        newParagraph.innerHTML = "This paragraph is added by JavaScript";
+        article.appendChild(newParagraph);
+
+        // adding one more gift item
+        let gList= document.getElementById('gList');
+        let newGItem = document.createElement('li');
+        newGItem.innerHTML = "new gift item-4";
+        gList.appendChild(newGItem);
+    </script>
+
+</body>
+</html>

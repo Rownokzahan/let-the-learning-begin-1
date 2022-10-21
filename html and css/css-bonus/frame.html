@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .photo-album{
+            display: flex;
+            flex-wrap: wrap
+        }
+        .photo-frame{
+            width: 200px;
+            height: 270px;
+            border: 5px solid black;
+            margin: 20px;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .photo-frame .photo img{
+            width: 100%;
+        }
+
+        .photo-detail{
+            position: absolute;
+            display: none;
+            width: 200px;
+            height: 270px;
+            top: 0;
+            /* visibility: hidden; */
+        }
+
+        .photo-frame:hover .photo-detail{
+            /* visibility: visible; */
+            display: block;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .photo-frame:hover .photo-detail h3{
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>My Photo Book</h1>
+    <section class="photo-album">
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/cat.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>CAT</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iusto eveniet veniam nobis laboriosam dolores unde nam eligendi. Perspiciatis fugit impedit vero earum, beatae aliquam cum quasi blanditiis dicta quidem.</p>
+            </div>
+        </div>
+
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/cat.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>CAT</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iusto eveniet veniam nobis laboriosam dolores unde nam eligendi. Perspiciatis fugit impedit vero earum, beatae aliquam cum quasi blanditiis dicta quidem.</p>
+            </div>
+        </div>
+        
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/cat.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>CAT</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iusto eveniet veniam nobis laboriosam dolores unde nam eligendi. Perspiciatis fugit impedit vero earum, beatae aliquam cum quasi blanditiis dicta quidem.</p>
+            </div>
+        </div>
+
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/cat.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>CAT</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iusto eveniet veniam nobis laboriosam dolores unde nam eligendi. Perspiciatis fugit impedit vero earum, beatae aliquam cum quasi blanditiis dicta quidem.</p>
+            </div>
+        </div>
+
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/cat.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>CAT</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iusto eveniet veniam nobis laboriosam dolores unde nam eligendi. Perspiciatis fugit impedit vero earum, beatae aliquam cum quasi blanditiis dicta quidem.</p>
+            </div>
+        </div>
+
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/cat.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>CAT</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iusto eveniet veniam nobis laboriosam dolores unde nam eligendi. Perspiciatis fugit impedit vero earum, beatae aliquam cum quasi blanditiis dicta quidem.</p>
+            </div>
+        </div>
+
+
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/cat.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>CAT</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iusto eveniet veniam nobis laboriosam dolores unde nam eligendi. Perspiciatis fugit impedit vero earum, beatae aliquam cum quasi blanditiis dicta quidem.</p>
+            </div>
+        </div>
+
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/cat.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>CAT</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iusto eveniet veniam nobis laboriosam dolores unde nam eligendi. Perspiciatis fugit impedit vero earum, beatae aliquam cum quasi blanditiis dicta quidem.</p>
+            </div>
+        </div>
+
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/cat.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>CAT</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iusto eveniet veniam nobis laboriosam dolores unde nam eligendi. Perspiciatis fugit impedit vero earum, beatae aliquam cum quasi blanditiis dicta quidem.</p>
+            </div>
+        </div>
+
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/cat.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>CAT</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iusto eveniet veniam nobis laboriosam dolores unde nam eligendi. Perspiciatis fugit impedit vero earum, beatae aliquam cum quasi blanditiis dicta quidem.</p>
+            </div>
+        </div>
+
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/cat.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>CAT</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iusto eveniet veniam nobis laboriosam dolores unde nam eligendi. Perspiciatis fugit impedit vero earum, beatae aliquam cum quasi blanditiis dicta quidem.</p>
+            </div>
+        </div>
+
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/cat.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>CAT</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iusto eveniet veniam nobis laboriosam dolores unde nam eligendi. Perspiciatis fugit impedit vero earum, beatae aliquam cum quasi blanditiis dicta quidem.</p>
+            </div>
+        </div>
+
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/cat.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>CAT</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iusto eveniet veniam nobis laboriosam dolores unde nam eligendi. Perspiciatis fugit impedit vero earum, beatae aliquam cum quasi blanditiis dicta quidem.</p>
+            </div>
+        </div>
+
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/cat.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>CAT</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus iusto eveniet veniam nobis laboriosam dolores unde nam eligendi. Perspiciatis fugit impedit vero earum, beatae aliquam cum quasi blanditiis dicta quidem.</p>
+            </div>
+        </div>
+
+        
+    </section>
+</body>
+</html>

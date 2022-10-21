@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* pseudo element */
+       h1{
+        color: goldenrod;
+       } 
+       .special:hover{
+        color:blueviolet;
+        font-size:36px;
+        background-color: gainsboro;
+       }
+
+       input:focus{
+        font-weight: bold;
+        font-size: 20px;
+        color: blue;
+       }
+
+       li:first-child{
+        background-color:brown;
+       }
+
+       li:last-child{
+        background-color: yellow;
+       }
+
+       li:nth-child(2n-1){
+        font-size: 34px;
+       }
+
+       a:visited{
+        color: blue;
+       }
+
+       /* Pseudo element */
+
+        li::before{
+            content: "Hello! ";
+            color: blueviolet;
+            font-size: larger;
+        } 
+
+        h1::after{
+            content: " Hello! ";
+            color: blueviolet;
+            font-size: larger;
+        } 
+    </style>
+</head>
+<body>
+    <h1>Pseudo class</h1>
+    <h1>Normal class</h1>
+    <h1 class="special">Vodro class</h1>
+    <input type="email" name="email">
+    <input type="password" name="password">
+    <ul>
+        <li>Alia</li>
+        <li>Dalia</li>
+        <li>maliya</li>
+        <li>Jarin</li>
+        <li>kalia</li>
+        <li>Asia</li>
+        <li>maria</li>
+    </ul>
+
+    <a href="https://translate.google.com/">Translate</a><br>
+    <a href="https://www.calculator.net/">Calculator</a>
+
+</body>
+</html>

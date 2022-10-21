@@ -1,0 +1,57 @@
+## To connect the html file with css file which is in another folder
+    use <link rel="stylesheet" href="/">
+
+## To style inside of an element
+    use span tag
+    <h1>Welcome To Our Page <span class="name">Basic Css</span> Learning</h1>
+
+## What is Box Model?(How much place an elemnt takes place of a web page)
+    width
+    height
+    border
+    margin
+    padding    
+
+## In default position:static;
+    position:relative; // other element can not takes it's place
+    position:absolute; //other element takes it's place
+
+##  CSS specificity(power)
+    !important > inline CSS > id > class > name
+        h1{
+        color: green !important;
+    }
+
+## home work
+    1. CSS overflow
+    2. CSS media Query
+    3. CSS animation
+    4. CSS transition(CSS3)
+    5. CSS selectors
+
+
+## how make a parent div height as child div
+    .parent{
+        display:table
+    }
+    .child{
+        display: table-row;
+    }
+
+## how to make a container center
+    display:block;
+    margin:auto;   
+
+## how to get rid of ul dots
+	  ul{
+            list-style: none;
+        }
+	OR,
+	  li{
+            list-style: none;
+        }
+
+## difference between css inline and block element
+	you can not give inline elements height,width,margin or padding however you can use margin left or right
+	
+ 

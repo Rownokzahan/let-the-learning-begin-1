@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 2px solid rgb(150, 222, 181);
+        }
+
+        .outer{
+            background-color: rgb(22, 22, 109);
+        }
+
+        .inner{
+            background-color: purple;
+            /* transform: scale(0.5); */
+
+            /* transform: rotate(30deg); */
+
+            transform: scale(0.5) rotate(30deg);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- .box*3.outer>.box.inner -->
+
+    <div class="box outer">
+        <div class="box inner"></div>
+    </div>
+    <div class="box outer">
+        <div class="box inner"></div>
+    </div>
+    <div class="box outer">
+        <div class="box inner"></div>
+    </div>
+</body>
+</html>

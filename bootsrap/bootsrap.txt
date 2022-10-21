@@ -1,0 +1,27 @@
+## how to center a div which is in another div
+	<div class="d-flex justify-content-center align-items center">
+      	<div><p>Hello</p></div>
+	</div>
+
+	//justify-content-center class makes the div horizontally centered
+	//align-items center class makes the div vertically centered
+
+
+## How to make a text grayish color 
+
+	<p class="text-muted">Text</p>
+
+
+## How make carousel arrow indicator black
+	.carousel-control-next,
+	.carousel-control-prev /*, .carousel-indicators */ {
+    		filter: invert(100%);
+	}
+
+## How to make carousel indicator into dots or change color
+	  .carousel .carousel-indicators button {
+   		width: 20px;
+   		height: 20px;
+   		border-radius: 100%;
+		background-color: orange !important;
+ 		}	

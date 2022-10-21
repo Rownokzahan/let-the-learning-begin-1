@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Company</title>
+</head>
+<body>
+    <h1>Exploring Events</h1>
+    <button onclick="alert(47)">Click Here 1</button>
+
+    <button onclick="handleClick()">Click here 2</button>
+
+    <button id="btn-3">Click here 3</button>
+
+    <button id="btn-4">Click here 4</button>
+
+    <button id="btn-5">Click here 5</button>
+
+    <button id="btn-6">Click here 6</button>
+
+    <script>
+        function handleClick(){
+            alert("you clicked the second button");
+        }
+
+
+        let thirdButton = document.getElementById('btn-3');
+        thirdButton.onclick = function(){
+            alert("The third button has been clicked")
+        }
+
+
+        function forthButton(){
+            document.body.style.backgroundColor ="lightpink";
+        }
+        let fourBtn = document.getElementById('btn-4');
+        fourBtn.onclick =forthButton;
+
+
+        let fifthBtn = document.getElementById('btn-5');
+        fifthBtn.addEventListener('click',fifBtn);
+        function fifBtn(){
+            document.getElementById('btn-5').style.backgroundColor = "yellow";
+        }
+
+        document.getElementById('btn-6').addEventListener('click',function(){
+            document.getElementById('btn-6').style.backgroundColor = "lightgreen";
+        });
+    </script>
+</body>
+</html>

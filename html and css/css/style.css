@@ -1,0 +1,28 @@
+*{
+    background-color: rgb(144, 82, 202);
+    color: white;
+    /* margin:0px; */
+
+}
+
+h1{
+    background-color: blueviolet;
+    color: white;
+}
+
+.name{
+    color: rgb(8, 8, 99);
+}
+
+h1,h2{
+    text-align: center;
+}
+
+.blog{
+    border: 2px solid rgb(54, 36, 94);
+    border-radius: 13px;
+    margin: 1px;
+    width: 30%;
+    /* float: left; */
+    display: inline-block;
+}
