@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .user-info{
+            background-color: rgb(236, 231, 225);
+            padding: 5px 10px 20px 30px;
+        }
+        .get-detail-btn{
+            border: none;
+            background-color: white;
+            color: rgb(55, 109, 127);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Number of users you need: <input type="text" name="" id="user-count"> <button id="user-count-btn">Go</button></h3>    
+    <div id="users-list"></div>
+
+
+    <script>
+        document.getElementById('user-count-btn').addEventListener('click',loadUsers)
+        function loadUsers(){
+            const userCount =document.getElementById('user-count').value;
+            fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response=>response.json())
+            .then(data=>{
+                data = data.slice(0,userCount);
+                const usersList= document.getElementById('users-list');
+                usersList.innerHTML='';
+                for (let i = 0; i < 10; i++) {
+                    const user =document.createElement('p');
+                    user.innerHTML=`${i+1}. <strong>${data[i].name} </strong> <button class="get-detail-btn" onclick="userDetails(${data[i].id})">Get Details &gt;&gt;</button>
+                                    <div id="user${i+1}"></div>`;
+                    usersList.appendChild(user);              
+                }
+            });
+        }
+
+        function userDetails(id){
+            fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+            .then(response=>response.json())
+            .then(data=>{
+                const detail= document.getElementById(`user${id}`);
+                detail.innerHTML='';
+                const userInfo =document.createElement('p');
+                userInfo.classList.add('user-info');
+                userInfo.innerHTML=`
+                <h3>Details of ${data.name}</h3>
+                    Name: ${data.name}<br>
+                    Phone: ${data.phone}<br>
+                    Email: ${data.email}<br>
+                    Company: ${data.company.name}<br>
+                    Website: ${data.website}<br>
+                `;
+                detail.appendChild(userInfo);
+            });
+        }
+
+    </script>
+</body>
+</html>
