@@ -1,0 +1,36 @@
+## syntax of jQuery
+    $('selector').action()
+
+##  $(document).ready(function(){
+    // your code here
+    });
+
+    is same as
+
+    $(function(){
+        // your code here
+    });
+
+
+## There are three main types of selcetors in jQuery
+    1. element selcetors   example: $('p').action()
+    2. id selcetor         example: $('#id').action()
+    3. class selector      example:  $('.class').action()
+
+## How empty an element
+    $('selector').empty();
+
+## How remove an element
+    $('selector').remove();
+
+## How add class
+    $('selector').addClass("class-name1 class-name2");
+
+## How remove a class
+    $('selector').removeClass("class-name");
+
+## how to add toggle class (if the class is present then removes it and vice varsa)
+    $('selector').toggleClass("class-name");
+
+## how set css in jQuery
+    $('selector').css('property','value');
