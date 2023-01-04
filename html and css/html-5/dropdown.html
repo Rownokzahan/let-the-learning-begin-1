@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            background-color: hsl(292, 13%, 22%);
+            padding: 20px;
+        }
+        nav > ul{
+            padding-left: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: large;
+        }
+
+        .dropdown > ul{
+            position: absolute;
+            background-color: hsl(292, 13%, 22%);
+            padding: 0;
+            margin-left: 20px;
+            opacity: 0.9;
+
+            display: none;
+        }
+
+        .dropdown:hover > ul{
+            display: block;
+            width: 150px;
+        }
+
+        .dropdown li{
+            border-bottom: 2px solid white;
+            padding: 10px;           
+        }
+
+        h1{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Logo</a></li>
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Cloths</a>
+                    <ul>
+                        <li><a href="#">For Men</a></li>
+                        <li class="dropdown">
+                            <a href="#">For Women</a>
+                            <ul>
+                                <li><a href="#">Abaya</a></li>
+                                <li><a href="#">Dress</a></li>
+                                <li><a href="#">Gown</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">For Children</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcom To My Website</h1>
+    </main>
+</body>
+</html>
